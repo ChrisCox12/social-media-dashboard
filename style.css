@@ -1,0 +1,145 @@
+:root {
+    --fb-blue: hsl(208, 92%, 53%);
+    --tw-blue: hsl(203, 89%, 53%);
+    --ig-gradient: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --yt-red: hsl(348, 97%, 39%);
+    --positive-green: hsl(163, 72%, 41%);
+    --negative-red: hsl(356, 69%, 56%);
+
+
+    --ft-regular: 400;
+    --ft-bold: 700;
+}
+
+*, *::before, *::after {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.dashboard {
+    margin: auto;
+}
+
+.dashboard__followers__card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dashboard__followers__card, .dashboard__overview__content__card {
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dashboard__followers__card__inner {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.fb, .tw, .ig, .yt {
+    padding-top: 4px;
+}
+
+.fb {
+    /* border-top: 4px solid var(--fb-blue); */
+    background-color: var(--fb-blue);
+}
+
+.tw {
+    /* border-top: 4px solid var(--tw-blue); */
+    background-color: var(--tw-blue);
+}
+
+.ig {
+    /* background: var(--ig-gradient);
+    padding-top: 4px; */
+    background: var(--ig-gradient);
+}
+
+.yt {
+    /* border-top: 4px solid var(--yt-red); */
+
+    background-color: var(--yt-red);
+}
+
+.dashboard__followers__card__follower-count span {
+    font-size: 40px;
+}
+
+.dashboard__followers, .dashboard__overview__content {
+    display: grid;
+}
+
+.dashboard__followers__card__handle, 
+.dashboard__followers__card__follower-count span, 
+.dashboard__overview__content__card__interaction-type, 
+.dashboard__overview__content__card__interaction-count,
+.dashboard__followers__card__follower-change {
+    font-weight: var(--ft-bold);
+}
+
+.dashboard__overview__content__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 12px;
+
+    border: 1px solid red;
+}
+
+.dashboard__overview__content__card__interaction-count {
+    font-size: 24px;
+}
+
+.dashboard__overview__content__card__social-media-icon, .dashboard__overview__content__card__interaction-count-change {
+    text-align: right;
+}
+
+.negative {
+    color: var(--negative-red);
+}
+
+.positive {
+    color: var(--positive-green);
+}
+
+
+/* .grid--followers, .grid--overview {
+    display: grid;
+} */
+
+
+@media screen and (min-width: 375px) {
+    .dashboard {
+        width: 90%;
+    }
+
+    .dashboard__followers__card {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .dashboard__followers {
+        grid-template-rows: repeat(4, 10rem);
+        row-gap: 24px;
+    }
+
+    .dashboard__overview__content {
+        grid-template-rows: repeat(8, 6rem);
+        row-gap: 14px;
+    }
+
+    /* .grid--followers {
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 24px;
+    }
+
+    .grid--overview {
+        grid-template-rows: repeat(8, 1fr);
+        row-gap: 14px;
+    } */
+}

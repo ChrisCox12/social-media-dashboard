@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
@@ -25,30 +30,46 @@
   
   
   
-    <div class="dashboard__followers">
+    <div class="dashboard__followers grid--followers">
       <div class="dashboard__followers__card fb">
-        @nathanf
-        1987
-        Followers
-        12 Today
+        <div class="dashboard__followers__card__inner">
+          <div class="dashboard__followers__card__handle"><span><img src="/images/icon-facebook.svg" alt="Facebook logo"></span> @nathanf</div>
+          <div class="dashboard__followers__card__follower-count">
+            <span>1987</span><br>
+            Followers
+          </div>
+          <div class="dashboard__followers__card__follower-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 12 Today</div>
+        </div>
       </div>
       <div class="dashboard__followers__card tw">
-        @nathanf
-        1044
-        Followers
-        99 Today
+        <div class="dashboard__followers__card__inner">
+          <div class="dashboard__followers__card__handle"><span><img src="/images/icon-twitter.svg" alt="Twitter logo"></span> @nathanf</div>
+          <div class="dashboard__followers__card__follower-count">
+            <span>1044</span><br>
+            Followers
+          </div>
+          <div class="dashboard__followers__card__follower-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 99 Today</div>
+        </div>
       </div>
       <div class="dashboard__followers__card ig">
-        @realnathanf
-        11k
-        Followers
-        1099 Today
+        <div class="dashboard__followers__card__inner">
+          <div class="dashboard__followers__card__handle"><span><img src="/images/icon-instagram.svg" alt="Instagram logo"></span> @realnathanf</div>
+          <div class="dashboard__followers__card__follower-count">
+            <span>11k</span><br>
+            Followers
+          </div>
+          <div class="dashboard__followers__card__follower-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 1099 Today</div>
+        </div>
       </div>
       <div class="dashboard__followers__card yt">
-        Nathan F.
-        8239
-        Subscribers
-        144 Today
+        <div class="dashboard__followers__card__inner">
+          <div class="dashboard__followers__card__handle"><span><img src="/images/icon-youtube.svg" alt="Youtube logo"></span> Nathan F.</div>
+          <div class="dashboard__followers__card__follower-count">
+            <span>8239</span><br>
+            Subscribers
+          </div>
+          <div class="dashboard__followers__card__follower-change negative"><span><img src="/images/icon-down.svg" alt="Down icon"></span> 144 Today</div>
+        </div>
       </div>
     </div>
   
@@ -56,46 +77,54 @@
   
     <div class="dashboard__overview">
       <div class="dashboard__overview__period">Overview - Today</div>
-      <div class="dashboard__overview__content">
+      <div class="dashboard__overview__content grid--overview">
         <div class="dashboard__overview__content__card page-views">
-          Page Views
-          87
-          3%
+          <div class="dashboard__overview__content__card__interaction-type">Page Views</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-facebook.svg" alt="Facebook icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">87</div>
+          <div class="dashboard__overview__content__card__interaction-count-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 3%</div>
         </div>
         <div class="dashboard__overview__content__card likes--fb">
-          Likes
-          52
-          2%
+          <div class="dashboard__overview__content__card__interaction-type">Likes</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-facebook.svg" alt="Facebook icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">52</div>
+          <div class="dashboard__overview__content__card__interaction-count-change negative"><span><img src="/images/icon-down.svg" alt="Down icon"></span> 2%</div>
         </div>
         <div class="dashboard__overview__content__card likes--ig">
-          Likes
-          5462
-          2257%
+          <div class="dashboard__overview__content__card__interaction-type">Likes</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-instagram.svg" alt="Instagram icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">5462</div>
+          <div class="dashboard__overview__content__card__interaction-count-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 2257%</div>
         </div>
         <div class="dashboard__overview__content__card profile-views">
-          Profile Views
-          52k
-          1375%
+          <div class="dashboard__overview__content__card__interaction-type">Profile Views</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-instagram.svg" alt="Instagram icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">52k</div>
+          <div class="dashboard__overview__content__card__interaction-count-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 1375%</div>
         </div>
         <div class="dashboard__overview__content__card retweets">
-          Retweets
-          117
-          303%
+          <div class="dashboard__overview__content__card__interaction-type">Retweets</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-twitter.svg" alt="Twitter icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">117</div>
+          <div class="dashboard__overview__content__card__interaction-count-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 303%</div>
         </div>
         <div class="dashboard__overview__content__card likes--tw">
-          Likes
-          507
-          553%
+          <div class="dashboard__overview__content__card__interaction-type">Likes</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-twitter.svg" alt="Twitter icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">507</div>
+          <div class="dashboard__overview__content__card__interaction-count-change positive"><span><img src="/images/icon-up.svg" alt="Up icon"></span> 553%</div>
         </div>
         <div class="dashboard__overview__content__card likes--yt">
-          Likes
-          107
-          19%
+          <div class="dashboard__overview__content__card__interaction-type">Likes</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-youtube.svg" alt="Youtube icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">107</div>
+          <div class="dashboard__overview__content__card__interaction-count-change negative"><span><img src="/images/icon-down.svg" alt="Down icon"></span> 19%</div>
         </div>
         <div class="dashboard__overview__content__card total-views">
-          Total Views
-          1407
-          12%
+          <div class="dashboard__overview__content__card__interaction-type">Total Views</div>
+          <div class="dashboard__overview__content__card__social-media-icon"><img src="/images/icon-youtube.svg" alt="Youtube icon"></div>
+          <div class="dashboard__overview__content__card__interaction-count">1407</div>
+          <div class="dashboard__overview__content__card__interaction-count-change negative"><span><img src="/images/icon-down.svg" alt="Down icon"></span> 12%</div>
         </div>
       </div>
     </div>
