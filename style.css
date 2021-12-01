@@ -6,7 +6,24 @@
     --positive-green: hsl(163, 72%, 41%);
     --negative-red: hsl(356, 69%, 56%);
 
+    /*  THEME COLORS  */
+    /*  LIGHT THEME  */
+    --lt-toggle: hsl(230, 22%, 74%);
+    --lt-body-bg: hsl(0, 0%, 100%);
+    --lt-top-bg: hsl(225, 100%, 98%);
+    --lt-card-bg: hsl(227, 47%, 96%);
+    --lt-text1: hsl(228, 12%, 44%);
+    --lt-text2: hsl(230, 17%, 14%);
 
+    /*  DARK THEME  */
+    --dk-toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --dk-body-bg: hsl(230, 17%, 14%);
+    --dk-top-bg: hsl(232, 19%, 15%);
+    --dk-card-bg: hsl(228, 28%, 20%);
+    --dk-text1: hsl(228, 34%, 66%);
+    --dk-text2: hsl(0, 0%, 100%);
+
+    /*  FONT WEIGHTS  */
     --ft-regular: 400;
     --ft-bold: 700;
 }
@@ -20,6 +37,8 @@
 
 .dashboard {
     margin: auto;
+    position: relative;
+    z-index: 3;
 }
 
 .dashboard__followers__card {
@@ -111,6 +130,94 @@
 /* .grid--followers, .grid--overview {
     display: grid;
 } */
+
+.lt-theme {
+    /* background-color: aquamarine; */
+    background-color: var(--lt-body-bg);
+}
+
+.dk-theme {
+    background-color: seagreen;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper-bg-top {
+    position: absolute;
+    z-index: 2;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    height: 50px;
+    background-color: brown;
+}
+
+.lt-bg {
+    background-color: var(--lt-body-bg);
+}
+
+.lt-bg-top {
+    background-color: var(--lt-top-bg);
+}
+
+.dk-bg {
+    background-color: var(--dk-body-bg);
+}
+
+.dk-bg-top {
+    background-color: var(--dk-top-bg);
+}
+
+.lt-heading, .lt-count, .lt-ic {
+    color: black;
+}
+
+.dk-heading, .dk-count, .dk-overview, .dk-ic {
+    color: var(--dk-text2);
+}
+
+.lt-tf, .lt-fc, .lt-handle, .lt-overview, .lt-it {
+    color: var(--lt-text1);
+}
+
+.dk-tf, .dk-fc, .dk-handle, .dk-it {
+    color: var(--dk-text1);
+}
+
+.lt-button {
+    color: var(--lt-toggle);
+}
+
+.dk-button {
+    color: var(--dk-toggle);
+}
+
+.lt-inner, .lt-cc {
+    background-color: var(--lt-card-bg);
+}
+
+.dk-inner, .dk-cc {
+    background-color: var(--dk-card-bg);
+}
+
+/* .lt-fc {
+    color: var(--lt-text1);
+} */
+
+/* .dk-fc {
+    color: var(--dk-text1);
+} */
+
+/* .lt-count {
+    color: black;
+} */
+
+/* .dk-count {
+    color: var(--dk-text2);
+} */
+
 
 
 @media screen and (min-width: 375px) {
